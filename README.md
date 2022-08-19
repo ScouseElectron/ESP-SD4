@@ -1,5 +1,5 @@
 # ESP-SD4
-# Copyright ScouseElectron <info@scouseelectron.co.uk>
+# Copyright ScouseElectron
 # Telephone: +44151 909 4329 9AM-5PM MON-FRI
 
 This is a project I made to control LED lighting from a Stream Deck using an ESP-01S
