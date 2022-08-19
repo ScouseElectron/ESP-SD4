@@ -1,0 +1,56 @@
+<!DOCTYPE HTML><html><head><title>AP-4 THINGY</title><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="./css/default.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="./js/code.js"></script>
+</head>
+<!-- ScouseElectron 15/8/22 ESP8266 v2.3 BASIC WEB INTERFACE -->
+<body><div class="topnav"><h1>AP-4 THINGY</h1></div>
+  <div class="content">
+  <div class="card">
+	<form name="esp" id="esp" method="post" action="./update" onsubmit="return vFormCheck();">
+	<h2>Connection Information</h2>
+	<label for="wifissid">WiFi SSID</label><br><input type="text" id="wifissid" name="wifissid" size="50"><br><br>
+	<label for="wifipass">WiFi Passphrase</label><br><input type="text" id="wifipass" name="wifipass" size="50"><br><br>
+	<!-- <label for="authmode">Security:</label>
+	<select name="authmode" id="authmode">
+		<option value="7">NONE</option>
+		<option value="5">WEP</option>
+		<option value="2">WPA-PSK</option>
+		<option value="4">WPA2-PSK [AES]</option>
+	</select>
+	<br><br> -->
+	<Label for="static">Static IP:</Label><input type="radio" id="static" name="ipmode" value="0" onclick="ipInputEnable();"> <Label for="static">DHCP:</Label><input type="radio" id="dhcp" name="ipmode" value="1" onclick="ipInputDisabled();"><br><br>
+  	<div id="ipselector">
+		<label for="ipaddr">IP Address</label><br><input type="text" id="ipaddr" name="ipaddr" size="50"><br><br>
+		<label for="netmask">Netmask</label><br><input type="text" id="netmask" name="netmask" size="50"><br><br>
+		<label for="gateway">Gateway</label><br><input type="text" id="gateway" name="gateway" size="50"><br><br>
+		<label for="dns1">Primary DNS</label><br><input type="text" id="dns1" name="dns1" size="50"><br><br>
+		<label for="dns2">Secondery DNS</label><br><input type="text" id="dns2" name="dns2" size="50"><br><br>
+	</div>
+	<p><button id="u_button" name="u_button" class="button">UPDATE</button></p>
+	</form>
+	<hr>
+	<h2>Change Password</h2>
+	<form name="esp2" id="esp2" method="post" action="./password" onsubmit="return vPassCheck();">
+		<label for="pas1">Current Password</label><br><input type="password" id="pas1" name="pas1" size="50" value=""><br><br>
+		<label for="pas2">New Password</label><br><input type="password" id="pas2" name="pas2" size="50" value=""><br><br>
+		<label for="pas3">Retype New Password</label><br><input type="password" id="pas3" name="pas3" size="50" value=""><br><br>
+		<p><button id="f_button" name="f_button" class="button">CHANGE</button></p>
+	</form>
+	<!-- <hr>
+	<h2>Check For Updates</h2>
+	<p><button id="c_button" name="c_button" class="button" onclick="cUpdate();">CHECK</button></p> -->
+	<hr>
+	<p>(c)2022 ScouseElectron</p>
+	</div>
+  </div>
+  <div id="mbox">
+	  <div id="mbox-content">
+		<div class="topnav topmbox"><h1>FORM ERROR</h1></div>
+		<h2><span id="mboxmgs"></span></h2>
+		<p><h2>Please check and try again</h2></p>
+		<p><button id="s_button" name="s_button" class="button" onclick="mboxClose();">CLOSE</button></p>
+	  </div>
+  </div>
+</body>
+</html>
