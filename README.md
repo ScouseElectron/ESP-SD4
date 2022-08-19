@@ -4,7 +4,7 @@
 
 This is a project I made to control LED lighting from a Stream Deck using an ESP-01S
 
-HTTP Setup Page, change SSID/PASSPHRASE select DHCP/Static and enter IP information.
+HTTP Setup Page, change SSID/PASSPHRASE select DHCP/Static, change password and enter IP information.
 
 Upload to a ESP-01S and connect to the AP to setup WiFi/IP details.
 
